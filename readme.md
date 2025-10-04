@@ -24,22 +24,30 @@ enum : {
 }
 
 Combinaciones para la lista de posibles viajes igual n! (n factorial).
+struct 
+{
+    origen : 1,
+    destino : 2,
+    precio : 10,
+    millas : -1
+}
 
 armar_lista_posibles_viajes -> [ array con los viajes posibles ]
 [
-    [ 1 2 10 -1 ] 
-    [ 2 3 11 5 ]
-    [ 3 4 7 -1 ]
+  0 struct [ 1 2 10 -1 ] 
+  2 struct [ 2 3 11 5 ]
+  5 struct [ 3 4 7 -1 ]
 ]
 ,
 [
-    [ 1 2 10 -1 ] ,
-    [ 2 4 8 -1 ]
+  0 [ 1 2 10 -1 ] ,
+  4 [ 2 4 8 -1 ]
 ]
-calcular_millas_y_precio -> [ precio, millas, bandera(millas si o no) ]
+calcular_millas_y_precio -> [ precio, millas ]
 
-[ 17, 5, true ]
-[ 18, 0, false ]
+[ 17, 5 ]
+[ 28, 0 ]
+[ 18, 0 ]
 
 determine_menor -> [ indice ]
 [ 0 ]
