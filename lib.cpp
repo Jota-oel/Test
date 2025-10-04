@@ -97,6 +97,6 @@ void get_prices_full(trip *A[], int counts[], int m, output out[])
 {
     for (int i = 0; i < m; ++i)
     {
-        get_prices(A[i], counts[i], &out[i]); // pasamos puntero a out[i]
+        get_prices(A[i], counts[i], &out[i]);
     }
 }
