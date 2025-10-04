@@ -62,3 +62,41 @@ int min_value(output list[], int k_size)
     }
     return index;
 }
+
+//Parte Juli
+
+int calc_price(trip A[], int n)
+{
+    int value = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (A[i].miles == -1)
+            value += A[i].price;
+    }
+    return value;
+}
+
+int calc_miles(trip A[], int n)
+{
+    int value = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (A[i].miles != -1)
+            value += A[i].miles;
+    }
+    return value;
+}
+
+void get_prices(trip A[], int n, output out[])
+{
+    out[0].price = calc_price(A, n);
+    out[0].miles = calc_miles(A, n);
+}
+
+void get_prices_full(trip *A[], int counts[], int m, output out[])
+{
+    for (int i = 0; i < m; ++i)
+    {
+        get_prices(A[i], counts[i], &out[i]); // pasamos puntero a out[i]
+    }
+}

@@ -27,5 +27,10 @@ void get_paths(int n, trip trips[], int m);
 
 int min_value(output list[], int k_size);
 
+int calc_price(trip A[], int n);
+int calc_miles(trip A[], int n);
+void get_prices(trip A[], int n, output out[]);
+void get_prices_full(trip *A[], int counts[], int m, output out[]);
+
 #endif
 
