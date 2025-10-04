@@ -46,3 +46,19 @@ void get_paths(int n, trip trips[], int m)
     }
 }
 
+int min_value(output list[], int k_size)
+{
+    if (k_size <= 0 || list == nullptr) return -1; 
+    int index = 0;
+    int minv = (list[0].price < list[0].miles) ? list[0].price : list[0].miles;
+    for (int i = 1; i < k_size; ++i)
+    {
+        int current = (list[i].miles < list[i].price) ? list[i].miles : list[i].price;
+        if (current < minv)
+        {
+            minv = current;
+            index = i;
+        }
+    }
+    return index;
+}

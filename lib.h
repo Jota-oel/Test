@@ -12,6 +12,9 @@ struct trip {
     int from, to, price, miles;
 };
 
+struct output {
+    int price, miles;
+};
 
 bool in_path(int path[], int depth, int node);
 
@@ -20,8 +23,9 @@ void dfs_index(int current_node, int n, trip trips[], int m,
                int path[], int depth,
                int paths[MAX_PATHS][MAX_LENGTH], int lengths[MAX_PATHS], int *total);
 
-
 void get_paths(int n, trip trips[], int m);
+
+int min_value(output list[], int k_size);
 
 #endif
 
